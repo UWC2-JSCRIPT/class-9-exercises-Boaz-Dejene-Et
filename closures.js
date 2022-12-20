@@ -2,7 +2,10 @@
 const createCounter = () => {
   let count = 0;
   const getCount = () => count;
-  const increaseCount = () => count++;
+  const increaseCount = () =>  {
+    count = count++;
+    return count
+  }
 
   return {
     getCount,
@@ -20,7 +23,17 @@ console.log(counter.getCount());
 // - addMessage method that adds a message to the array
 // - getMessage(index) method that returns the message at index index
 
-const createMessageHolder = () => {};
+const createMessageHolder = () => {
+  let array = [];
+  function getMessage(index) {
+    
+  }
+  function addMessage(message) {
+    if(message) {
+      array.push(message)
+    }
+  }
+};
 
 // Test
 const messageHolder = createMessageHolder();
