@@ -7,6 +7,7 @@ const createCounter = () => {
     return count
   }
 
+  
   return {
     getCount,
     increaseCount
