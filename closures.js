@@ -25,12 +25,14 @@ console.log(counter.getCount());
 
 const createMessageHolder = () => {
   let array = [];
-  function getMessage(index) {
-    
-  }
-  function addMessage(message) {
-    if(message) {
-      array.push(message)
+  return {
+    addMessage(message) {
+      if(message) {
+        array.push(message)
+      }
+    },
+    getMessage(index) {
+      return array[index]
     }
   }
 };
@@ -69,7 +71,10 @@ console.log(addThree(41));
 // - This accepts a single argument, name (i.e. "Matt")
 // - This function should return the greeting combined with the name, (i.e. "Hello Matt")
 const createGreeting = function(greeting) {
-  
+  return (name) => {
+    // console.log(`${greeting} - ${name}`)
+    return `${greeting} - ${name}`
+  }
 };
 
 // Test
